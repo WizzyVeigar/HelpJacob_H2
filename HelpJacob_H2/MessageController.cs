@@ -35,7 +35,7 @@ namespace HelpJacob_H2
 
             switch (message.MessageType)
             {
-                case MessageCarrier.Smtp:
+                case MessageCarrier.SMTP:
                     return MessagerSender.Instance.SendSmtpMessage(message);
                 case MessageCarrier.VMessage:
                     return MessagerSender.Instance.SendVMessage(message);

@@ -13,9 +13,11 @@ namespace HelpJacob_H2
             string[] receivers = { "hi@everyone.dk" };
 
 
-            IMessage message = new Message(receivers, "Lars@Larsen.dk", "Jeg har et godt tilbud til dig", "Best offer you will ever get", MessageCarrier.Smtp, MessageModifier.IsHtml);
+            IMessage message = new Message(receivers, "Lars@Larsen.dk", "Jeg har et godt tilbud til dig", "Best offer you will ever get", MessageCarrier.VMessage, MessageModifier.IsHtml);
 
-            MessageController.Instance.SendMessage(message);
+            Console.WriteLine(MessageController.Instance.SendMessage(message));
+            Console.WriteLine(message.ToString());
+            Console.ReadKey();
         }
     }
 }

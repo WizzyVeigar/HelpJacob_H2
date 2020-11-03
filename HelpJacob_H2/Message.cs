@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 namespace HelpJacob_H2
 {
 
-    public enum MessageCarrier 
-    { 
-        Smtp, 
-        VMessage 
+    public enum MessageCarrier
+    {
+        SMTP,
+        VMessage
     }
 
     public enum MessageModifier
@@ -78,6 +78,23 @@ namespace HelpJacob_H2
             {
                 messageModifier = value;
             }
+        }
+
+
+        public override string ToString()
+        {
+            string temp = string.Empty;
+
+            for (int i = 0; i < Receivers.Length; i++)
+            {
+                temp += "Receiver" + (i+1) + ": " + Receivers[i] + "\n";
+            }
+            temp += "Sender: " + Sender + "\n" +
+                "Body of Mail: " + Body + "\n" +
+                "Subject: " + Subject + "\n" +
+                "MessageType: " + Enum.GetName(typeof(MessageCarrier), MessageType) + "\n" +
+                "MessageModifier: " + Enum.GetName(typeof(MessageModifier), MessageModifier);
+            return temp;
         }
 
 
