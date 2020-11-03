@@ -35,7 +35,7 @@ namespace HelpJacob_H2
             return "" + message + "";
         }
         /// <summary>
-        /// Converts the messages body to Json
+        /// Converts the messages body to Json (Example method for extension of the application)
         /// </summary>
         /// <param name="message">The message which body you want to Convert</param>
         /// <returns>Returns the messages converted body</returns>
